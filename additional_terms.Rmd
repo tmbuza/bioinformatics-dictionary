@@ -1,0 +1,193 @@
+# Additional Terms
+
+## Term: Homology Modeling  
+### Definition
+A computational method used to predict the three-dimensional structure of a protein based on its amino acid sequence and the known structures of related proteins.
+
+## Term: Phylogenetics  
+### Definition
+The study of evolutionary relationships among organisms based on genetic data, such as DNA or protein sequences, to reconstruct evolutionary trees or phylogenetic networks.
+
+## Term: Phylogenetics  
+### Definition
+The study of evolutionary relationships among organisms based on genetic data, such as DNA or protein sequences, to reconstruct evolutionary trees or phylogenetic networks.
+### R code illustration
+
+```{r phylogenetics}
+# Example R code for phylogenetic analysis
+# You can use packages like ape for phylogenetic tree construction
+library(ape)
+
+# Simulate a random phylogenetic tree
+tree <- rtree(10)
+
+# Plot the phylogenetic tree
+plot(tree)
+
+
+```
+
+
+```
+
+### Interpretation
+- This R code generates a random phylogenetic tree with 10 tips using the rtree function from the ape package. 
+- The resulting tree object can be visualized using the plot function, providing insight into the evolutionary relationships among the simulated organisms.
+
+
+## Term: Structural Bioinformatics  
+### Definition
+The study of the structure and function of biological macromolecules, such as proteins and nucleic acids, using computational techniques and tools.
+
+## Term: Structural Bioinformatics  
+### Definition
+The study of the structure and function of biological macromolecules, such as proteins and nucleic acids, using computational techniques and tools.
+
+
+### R code illustration
+```{r structuralbioinfo}
+
+```
+
+## Term: Network Analysis  
+### Definition
+The analysis of complex biological systems, such as protein-protein interaction networks or gene regulatory networks, to understand their structure, function, and dynamics.
+
+
+### R code illustration
+```{r network}
+
+```
+
+## Term: Systems Biology  
+### Definition
+An interdisciplinary field that studies biological systems as integrated networks of genes, proteins, and other molecules to understand their behavior and function.
+
+
+### R code illustration
+```{r systembiology}
+
+```
+
+
+## Term: Next-Generation Sequencing (NGS)  
+### Definition
+High-throughput sequencing technologies that enable rapid and cost-effective sequencing of DNA or RNA, allowing for various applications in genomics, transcriptomics, and epigenomics.
+
+
+### R code illustration
+```{r ngseq}
+
+```
+
+
+## Term: CRISPR/Cas9  
+### Definition
+A genome editing technology used to modify DNA sequences in living organisms by leveraging the CRISPR-Cas9 system to target specific genomic loci.
+
+
+### R code illustration
+```{r crisprcas9}
+
+```
+
+
+## Term: Functional Annotation  
+### Definition
+The process of assigning biological function to DNA sequences, genes, or proteins based on experimental or computational evidence, often using databases and bioinformatics tools.
+
+
+### R code illustration
+```{r functionalannotate}
+
+```
+
+
+## Term: Machine Learning  
+### Definition
+A branch of artificial intelligence that involves the development of algorithms and statistical models that enable computers to learn from and make predictions or decisions based on data.
+
+
+### R code illustration
+```{r machineleaning}
+
+```
+
+
+## Term: Transcriptome Assembly  
+### Definition
+The reconstruction of full-length RNA transcripts from short sequencing reads obtained through RNA sequencing, allowing for the annotation and quantification of gene expression.
+
+
+### R code illustration
+```{r transcriptome}
+
+```
+
+
+## Term: Phylogenomics  
+### Definition
+The integration of genomic and phylogenetic approaches to study the evolutionary history of genes and genomes across different species.
+
+
+### R code illustration
+```{r phylogenomics}
+
+```
+
+
+## Term: Metabolite Identification  
+### Definition
+The process of identifying and quantifying small molecules (metabolites) in biological samples using analytical techniques coupled with computational analysis.
+
+
+### R code illustration
+```{r metabolite}
+
+```
+
+
+## Term: Cancer Genomics  
+### Definition
+The study of the genetic basis of cancer, including the identification of mutations and other genomic alterations associated with the initiation, progression, and treatment of cancer.
+
+
+### R code illustration
+```{r cancergenomics}
+
+```
+
+
+## Term: Allele Frequency  
+### Definition
+The proportion of a particular allele (variant form of a gene) in a population, often used in population genetics studies to understand genetic diversity and evolutionary processes.
+
+
+### R code illustration
+```{r allelefreq}
+
+```
+
+
+## Term: Genome Annotation  
+### Definition
+The process of identifying and labeling the features of a genome, such as genes, regulatory elements, and repetitive sequences, to create a functional and structural map of the genome.
+
+
+### R code illustration
+```{r genomeannotate}
+
+```
+
+
+## Term: Pathway Analysis  
+### Definition
+The identification and analysis of biological pathways and networks that are significantly enriched or perturbed in a given set of genes or proteins, often used to infer biological functions and relationships.
+
+
+### R code illustration
+```{r pathwayanalysis}
+
+```
+
+

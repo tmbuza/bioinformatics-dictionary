@@ -1,0 +1,61 @@
+# (PART) MACHINE LEARNING {-} 
+
+# Machine Learning and AI
+
+## Term: Classification
+
+**Definition:** Classification is a machine learning task where the goal is to predict the categorical class labels of new instances based on past observations or training data.
+
+### Random Forest Model
+
+**R Code Illustration:** (Note: This example demonstrates how to perform classification using the caret package.)
+
+```{r}
+# Load required packages
+library(caret)
+
+# Load example dataset
+data(iris)
+
+# Train a classification model (e.g., Random Forest)
+model <- train(Species ~ ., data = iris, method = "rf")
+
+# Print the trained model
+cat(model)
+
+```
+
+
+## Term: Regression
+**Definition:** Regression is a machine learning task where the goal is to predict continuous numerical values based on input features, aiming to model the relationship between variables.
+
+### Linear Regression Model
+
+**R Code Illustration:** (Note: This example demonstrates how to perform regression using the caret package.)
+
+```{r}
+# Train a regression model (e.g., Linear Regression)
+model <- train(Sepal.Length ~ ., data = iris, method = "lm")
+
+# Print the trained model
+cat(model)
+
+```
+
+
+## Term: Feature Selection
+**Definition:** Feature selection is the process of selecting a subset of relevant features (input variables) from the original set of features, aiming to improve model performance, reduce overfitting, and enhance interpretability.
+
+
+### Recursive Feature Elimination
+
+**R Code Illustration:** (Note: This example demonstrates how to perform feature selection using the caret package.)
+
+```{r}
+# Perform feature selection (e.g., Recursive Feature Elimination)
+selected_features <- rfe(iris[, -5], iris[, 5], sizes = c(1:4), rfeControl = rfeControl(functions = lmFuncs))
+
+# Print selected features
+cat(selected_features)
+
+```

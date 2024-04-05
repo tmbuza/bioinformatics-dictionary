@@ -1,0 +1,19 @@
+book_filename: "bioinformatics_dictionary"
+new_session: true
+language:
+  label: "en"
+  ui:
+  chapter_name: Chapter
+before_chapter_script: ["_common.R"]
+delete_merged_file: true
+
+output_dir: docs2
+
+rmd_files:
+  - index.Rmd
+  - 00-how-to-use.Rmd
+  - 01-bioinfo-terms.Rmd
+  # - 01-omics.Rmd
+  - 02-visualize.Rmd
+  - 03-microbiome.Rmd
+  # - 04-machine-learning.Rmd
