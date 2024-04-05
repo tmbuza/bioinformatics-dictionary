@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>3 Visualization Terminologies | Bioinformatics Dictionary</title>
+<meta name="author" content="Teresia Mrema Buza">
+<meta name="description" content="This compilation provides concise definitions of essential bioinformatics concepts, complemented by simple R code illustrations demonstrating various visualization techniques. These illustrations...">
+<meta name="generator" content="bookdown 0.38 with bs4_book()">
+<meta property="og:title" content="3 Visualization Terminologies | Bioinformatics Dictionary">
+<meta property="og:type" content="book">
+<meta property="og:url" content="https://tmbuza.github.io/bioinformatics-dictionary/visualization-terminologies.html">
+<meta property="og:image" content="https://tmbuza.github.io/bioinformatics-dictionary/images/bioinformatics.png">
+<meta property="og:description" content="This compilation provides concise definitions of essential bioinformatics concepts, complemented by simple R code illustrations demonstrating various visualization techniques. These illustrations...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="3 Visualization Terminologies | Bioinformatics Dictionary">
+<meta name="twitter:description" content="This compilation provides concise definitions of essential bioinformatics concepts, complemented by simple R code illustrations demonstrating various visualization techniques. These illustrations...">
+<meta name="twitter:image" content="https://tmbuza.github.io/bioinformatics-dictionary/images/bioinformatics.png">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><link href="libs/Sen-0.4.9/font.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM%20Mono&amp;display=swap" rel="stylesheet">
+<link href="libs/Bitter-0.4.9/font.css" rel="stylesheet">
+<script src="libs/bs3compat-0.6.2/transition.js"></script><script src="libs/bs3compat-0.6.2/tabs.js"></script><script src="libs/bs3compat-0.6.2/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="A Comprehensive Guide to Bioinformatic Concepts and Tools">Bioinformatics Dictionary</a>:
+        <small class="text-muted">A Comprehensive Guide to Bioinformatic Concepts and Tools</small>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Bioinformatics Dictionary: A Comprehensive Guide to Bioinformatic Concepts and Tools</a></li>
+<li><a class="" href="how-to-use.html"><span class="header-section-number">1</span> How to Use</a></li>
+<li class="book-part">BIOINFORMATICS TERMS</li>
+<li><a class="" href="omics-terminologies.html"><span class="header-section-number">2</span> Omics Terminologies</a></li>
+<li class="book-part">VISUALIZATION TERMS</li>
+<li><a class="active" href="visualization-terminologies.html"><span class="header-section-number">3</span> Visualization Terminologies</a></li>
+<li class="book-part">MICROBIOME TERMS</li>
+<li><a class="" href="microbiome-terminologies.html"><span class="header-section-number">4</span> Microbiome Terminologies</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com/tmbuza/imap-machine-learning">View book source <i class="fas fa-air-freshener"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="visualization-terminologies" class="section level1" number="3">
+<h1>
+<span class="header-section-number">3</span> Visualization Terminologies<a class="anchor" aria-label="anchor" href="#visualization-terminologies"><i class="fas fa-link"></i></a>
+</h1>
+<p>This compilation provides concise definitions of essential bioinformatics concepts, complemented by simple R code illustrations demonstrating various visualization techniques. These illustrations cover a wide range of visualization types, offering a comprehensive overview of bioinformatics visualization practices.</p>
+<div id="term-phylogenetic-tree" class="section level2" number="3.1">
+<h2>
+<span class="header-section-number">3.1</span> Term: Phylogenetic Tree<a class="anchor" aria-label="anchor" href="#term-phylogenetic-tree"><i class="fas fa-link"></i></a>
+</h2>
+<div id="definition-60" class="section level3" number="3.1.1">
+<h3>
+<span class="header-section-number">3.1.1</span> Definition<a class="anchor" aria-label="anchor" href="#definition-60"><i class="fas fa-link"></i></a>
+</h3>
+<p>A phylogenetic tree is a branching diagram that represents the evolutionary relationships among a group of organisms based on their genetic similarities and differences.</p>
+</div>
+<div id="r-code-illustration-60" class="section level3" number="3.1.2">
+<h3>
+<span class="header-section-number">3.1.2</span> R Code Illustration<a class="anchor" aria-label="anchor" href="#r-code-illustration-60"><i class="fas fa-link"></i></a>
+</h3>
+<div class="sourceCode" id="cb66"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Load required packages</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://ape-package.ird.fr/">ape</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Create a simple phylogenetic tree</span></span>
+<span><span class="va">tree</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/ape/man/read.tree.html">read.tree</a></span><span class="op">(</span>text <span class="op">=</span> <span class="st">"(((Human, Chimp), Gorilla), Orangutan);"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Plot the phylogenetic tree</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">tree</span><span class="op">)</span></span></code></pre></div>
+<div class="inline-figure"><img src="02-visualize_files/figure-html/phytree-1.png" width="70%" style="display: block; margin: auto;"></div>
+</div>
+<div id="interpretation-60" class="section level3" number="3.1.3">
+<h3>
+<span class="header-section-number">3.1.3</span> Interpretation:<a class="anchor" aria-label="anchor" href="#interpretation-60"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li>Phylogenetic trees visually represent evolutionary relationships among organisms.</li>
+<li>Constructed from genetic data, such as DNA or protein sequences.</li>
+<li>Branching patterns illustrate common ancestry and divergence over time.</li>
+<li>Each node represents a common ancestor, with branch lengths indicating genetic divergence.</li>
+<li>Used in evolutionary biology, biodiversity studies, and comparative genomics.</li>
+<li>Enables inference of evolutionary relationships, tracing species origins, and understanding diversification patterns.</li>
+</ul>
+</div>
+</div>
+<div id="term-nucleotide-sequence-logo" class="section level2" number="3.2">
+<h2>
+<span class="header-section-number">3.2</span> Term Nucleotide sequence logo<a class="anchor" aria-label="anchor" href="#term-nucleotide-sequence-logo"><i class="fas fa-link"></i></a>
+</h2>
+<div id="definition-61" class="section level3" number="3.2.1">
+<h3>
+<span class="header-section-number">3.2.1</span> Definition<a class="anchor" aria-label="anchor" href="#definition-61"><i class="fas fa-link"></i></a>
+</h3>
+<p>A nucleotide sequence logo is a graphical representation of the consensus sequence derived from multiple sequence alignment, displaying the relative frequency of each nucleotide (A, T, G, C) at each position. It provides a visual summary of sequence conservation, highlighting important regions and motifs within DNA or RNA sequences.</p>
+</div>
+<div id="r-code-illustration-61" class="section level3" number="3.2.2">
+<h3>
+<span class="header-section-number">3.2.2</span> R Code Illustration<a class="anchor" aria-label="anchor" href="#r-code-illustration-61"><i class="fas fa-link"></i></a>
+</h3>
+<div class="sourceCode" id="cb67"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Load required package</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/omarwagih/ggseqlogo">ggseqlogo</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Example aligned sequences</span></span>
+<span><span class="va">aligned_sequences</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"ATGC"</span>, <span class="st">"ATGC"</span>, <span class="st">"ATGC"</span>, <span class="st">"ATGC"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Create sequence logo</span></span>
+<span><span class="va">logo</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/ggseqlogo/man/ggseqlogo.html">ggseqlogo</a></span><span class="op">(</span><span class="va">aligned_sequences</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span><span class="op">(</span><span class="va">logo</span><span class="op">)</span></span></code></pre></div>
+<div class="inline-figure"><img src="02-visualize_files/figure-html/nuclogo-1.png" width="70%" style="display: block; margin: auto;"></div>
+</div>
+<div id="interpretation-61" class="section level3" number="3.2.3">
+<h3>
+<span class="header-section-number">3.2.3</span> Interpretation:<a class="anchor" aria-label="anchor" href="#interpretation-61"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li>Nucleotide sequence logos depict the frequency of each nucleotide at each position in a sequence alignment.</li>
+<li>Conserved regions are represented by tall letters, indicating a high frequency of a particular nucleotide at that position.</li>
+<li>Variable positions have shorter letters or gaps, indicating lower sequence conservation.</li>
+<li>The height of the letters at each position reflects the relative frequency of the corresponding nucleotide.</li>
+<li>Sequence logos help identify conserved motifs, regulatory elements, and functional sites within DNA or RNA sequences.</li>
+<li>They are widely used in bioinformatics to visualize sequence conservation and infer functional significance from sequence data.</li>
+</ul>
+</div>
+</div>
+<div id="amino-acid-sequence-logo" class="section level2" number="3.3">
+<h2>
+<span class="header-section-number">3.3</span> Amino Acid Sequence Logo<a class="anchor" aria-label="anchor" href="#amino-acid-sequence-logo"><i class="fas fa-link"></i></a>
+</h2>
+<div id="definition-62" class="section level3" number="3.3.1">
+<h3>
+<span class="header-section-number">3.3.1</span> Definition<a class="anchor" aria-label="anchor" href="#definition-62"><i class="fas fa-link"></i></a>
+</h3>
+<p>An amino acid sequence logo is a graphical representation of the consensus sequence derived from multiple sequence alignment of protein sequences, displaying the relative frequency of each amino acid at each position. It provides a visual summary of sequence conservation, highlighting important regions and motifs within protein sequences.</p>
+</div>
+<div id="r-code-illustration-62" class="section level3" number="3.3.2">
+<h3>
+<span class="header-section-number">3.3.2</span> R Code Illustration<a class="anchor" aria-label="anchor" href="#r-code-illustration-62"><i class="fas fa-link"></i></a>
+</h3>
+<div class="sourceCode" id="cb68"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Load required library</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/omarwagih/ggseqlogo">ggseqlogo</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Example protein sequences with more similarities</span></span>
+<span><span class="va">protein_sequences</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span></span>
+<span>  <span class="st">"MVLSPADKTNVKAAWGKVGAHAGEYGAEALERMFLSFPTTKTYFPHFDLSHGSAQVKGHGKK"</span>,</span>
+<span>  <span class="st">"MTDKSELVQKAKLAEQAERYDDMAAAMKAVTEQGHELSNEERNLLSVAYKNVVGARRSSWRV"</span>,</span>
+<span>  <span class="st">"MVKVIVTDCTHTKHPGASRSGMVRHGNSGQQRQISLLKDLPEVKNRDIMVVFPNEITFEYGI"</span>,</span>
+<span>  <span class="st">"MVKVIVTDCTHTKHPGASRSGMVRHGNSGQQRQISLLKDLPEVKNRDIMVVFPNEITFEYGI"</span>,</span>
+<span>  <span class="st">"MVKVIVTDCTHTKHPGASRSGMVRHGNSGQQRQISLLKDLPEVKNRDIMVVFPNEITFEYGI"</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Create protein sequence logo</span></span>
+<span><span class="fu"><a href="https://rdrr.io/pkg/ggseqlogo/man/ggseqlogo.html">ggseqlogo</a></span><span class="op">(</span><span class="va">protein_sequences</span><span class="op">)</span></span></code></pre></div>
+<div class="inline-figure"><img src="02-visualize_files/figure-html/aalogo-1.png" width="70%" style="display: block; margin: auto;"></div>
+</div>
+<div id="interpretation-62" class="section level3" number="3.3.3">
+<h3>
+<span class="header-section-number">3.3.3</span> Interpretation<a class="anchor" aria-label="anchor" href="#interpretation-62"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li>Amino acid sequence logos depict the frequency of each amino acid at each position in a sequence alignment.</li>
+<li>Conserved regions are represented by tall letters, indicating a high frequency of a particular amino acid at that position.</li>
+<li>Variable positions have shorter letters or gaps, indicating lower sequence conservation.</li>
+<li>The height of the letters at each position reflects the relative frequency of the corresponding amino acid.</li>
+<li>Sequence logos help identify conserved motifs, functional domains, and structurally important regions within protein sequences.</li>
+<li>They are widely used in bioinformatics to visualize sequence conservation and infer functional significance from protein sequence data.</li>
+</ul>
+</div>
+</div>
+<div id="term-genome-browser" class="section level2" number="3.4">
+<h2>
+<span class="header-section-number">3.4</span> Term: Genome Browser<a class="anchor" aria-label="anchor" href="#term-genome-browser"><i class="fas fa-link"></i></a>
+</h2>
+<div id="definition-63" class="section level3" number="3.4.1">
+<h3>
+<span class="header-section-number">3.4.1</span> Definition<a class="anchor" aria-label="anchor" href="#definition-63"><i class="fas fa-link"></i></a>
+</h3>
+<p>A genome browser is a bioinformatics tool used to visualize and explore genomic data, allowing researchers to navigate, analyze, and interpret various genomic features within a genome assembly. Genome browsers provide an interactive interface for displaying genomic sequences, gene annotations, regulatory elements, genetic variation, and other relevant genomic information.</p>
+</div>
+<div id="r-code-illustration-63" class="section level3" number="3.4.2">
+<h3>
+<span class="header-section-number">3.4.2</span> R Code Illustration<a class="anchor" aria-label="anchor" href="#r-code-illustration-63"><i class="fas fa-link"></i></a>
+</h3>
+<div class="sourceCode" id="cb69"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Open a genome browser in a web browser</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/browseURL.html">browseURL</a></span><span class="op">(</span><span class="st">"https://genome.ucsc.edu/cgi-bin/hgGateway"</span><span class="op">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb70"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Example code for using the Gviz package to visualize genomic data</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">Gviz</span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">BSgenome.Hsapiens.UCSC.hg19</span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">TxDb.Hsapiens.UCSC.hg19.knownGene</span><span class="op">)</span></span>
+<span><span class="va">txdb</span> <span class="op">&lt;-</span> <span class="va">TxDb.Hsapiens.UCSC.hg19.knownGene</span></span>
+<span><span class="va">gene</span> <span class="op">&lt;-</span> <span class="st">"ENSG00000157764"</span></span>
+<span><span class="va">chr</span> <span class="op">&lt;-</span> <span class="st">"chr6"</span></span>
+<span><span class="va">start</span> <span class="op">&lt;-</span> <span class="fl">26025651</span></span>
+<span><span class="va">end</span> <span class="op">&lt;-</span> <span class="fl">26078124</span></span>
+<span><span class="fu">plotTracks</span><span class="op">(</span></span>
+<span>  <span class="fu">GenomeAxisTrack</span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  <span class="fu">AnnotationTrack</span><span class="op">(</span></span>
+<span>    <span class="va">txdb</span>,</span>
+<span>    name <span class="op">=</span> <span class="st">"Genes"</span>,</span>
+<span>    chromosome <span class="op">=</span> <span class="va">chr</span>,</span>
+<span>    start <span class="op">=</span> <span class="va">start</span>,</span>
+<span>    end <span class="op">=</span> <span class="va">end</span>,</span>
+<span>    isLabelInside <span class="op">=</span> <span class="cn">TRUE</span>,</span>
+<span>    fontsize <span class="op">=</span> <span class="fl">8</span></span>
+<span>  <span class="op">)</span></span>
+<span><span class="op">)</span></span></code></pre></div>
+</div>
+</div>
+<div id="term-heatmap" class="section level2" number="3.5">
+<h2>
+<span class="header-section-number">3.5</span> Term: Heatmap<a class="anchor" aria-label="anchor" href="#term-heatmap"><i class="fas fa-link"></i></a>
+</h2>
+<div id="definition-64" class="section level3" number="3.5.1">
+<h3>
+<span class="header-section-number">3.5.1</span> Definition<a class="anchor" aria-label="anchor" href="#definition-64"><i class="fas fa-link"></i></a>
+</h3>
+<p>A heatmap is a graphical representation of data where values in a matrix are represented as colors. It is commonly used in bioinformatics to visualize high-dimensional data, such as gene expression levels, protein abundance, or genomic features. In a heatmap, rows and columns of the matrix represent individual samples or features, and the color intensity indicates the magnitude of the values. Heatmaps are useful for identifying patterns, clusters, or correlations within large datasets.</p>
+<div class="sourceCode" id="cb71"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Load required library</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Example data</span></span>
+<span><span class="va">data_matrix</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">100</span>, mean <span class="op">=</span> <span class="fl">0</span>, sd <span class="op">=</span> <span class="fl">1</span><span class="op">)</span>, nrow <span class="op">=</span> <span class="fl">10</span>, ncol <span class="op">=</span> <span class="fl">10</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Convert matrix to dataframe</span></span>
+<span><span class="va">data_df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html">as.data.frame</a></span><span class="op">(</span><span class="va">data_matrix</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Reshape data for ggplot</span></span>
+<span><span class="va">data_df</span> <span class="op">&lt;-</span> <span class="va">data_df</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>row <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/row_number.html">row_number</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://tidyr.tidyverse.org/reference/pivot_longer.html">pivot_longer</a></span><span class="op">(</span><span class="op">-</span><span class="va">row</span>, names_to <span class="op">=</span> <span class="st">"column"</span>, values_to <span class="op">=</span> <span class="st">"value"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Create heatmap</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">data_df</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">column</span>, y <span class="op">=</span> <span class="va">row</span>, fill <span class="op">=</span> <span class="va">value</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_tile.html">geom_tile</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_gradient.html">scale_fill_gradient</a></span><span class="op">(</span>low <span class="op">=</span> <span class="st">"green"</span>, high <span class="op">=</span> <span class="st">"red"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<div class="inline-figure"><img src="02-visualize_files/figure-html/heatmap-1.png" width="70%" style="display: block; margin: auto;"></div>
+</div>
+<div id="interpretation-63" class="section level3" number="3.5.2">
+<h3>
+<span class="header-section-number">3.5.2</span> Interpretation<a class="anchor" aria-label="anchor" href="#interpretation-63"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li>Heatmaps provide a visual representation of complex datasets, allowing researchers to quickly identify patterns and trends.</li>
+<li>Each cell in the heatmap corresponds to a value in the data matrix, and the color intensity represents the magnitude of the value.</li>
+<li>Heatmaps are commonly used in gene expression analysis to visualize gene expression profiles across samples or conditions.</li>
+<li>Clustering algorithms can be applied to heatmap data to group samples or features with similar expression patterns.</li>
+<li>Heatmaps are versatile and can be customized with various color scales, annotations, and clustering methods to enhance data interpretation.</li>
+</ul>
+</div>
+</div>
+<div id="term-volcano-plots" class="section level2" number="3.6">
+<h2>
+<span class="header-section-number">3.6</span> Term: Volcano Plots<a class="anchor" aria-label="anchor" href="#term-volcano-plots"><i class="fas fa-link"></i></a>
+</h2>
+<div id="definition-65" class="section level3" number="3.6.1">
+<h3>
+<span class="header-section-number">3.6.1</span> Definition<a class="anchor" aria-label="anchor" href="#definition-65"><i class="fas fa-link"></i></a>
+</h3>
+<p>A volcano plot is a type of scatter plot commonly used in bioinformatics to visualize the results of statistical tests, such as differential gene expression analysis. The plot displays the relationship between statistical significance (usually represented as the negative logarithm of the p-value) on the y-axis and the magnitude of change (e.g., fold change) on the x-axis. Each point on the plot represents a gene or feature, with significantly differentially expressed genes typically highlighted based on predefined thresholds for statistical significance and fold change.</p>
+</div>
+<div id="r-code-illustration-64" class="section level3" number="3.6.2">
+<h3>
+<span class="header-section-number">3.6.2</span> R Code Illustration<a class="anchor" aria-label="anchor" href="#r-code-illustration-64"><i class="fas fa-link"></i></a>
+</h3>
+<div class="sourceCode" id="cb72"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Load required library</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Generate example data1</span></span>
+<span><span class="va">log_fc</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">100</span>, mean <span class="op">=</span> <span class="fl">0</span>, sd <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span>
+<span><span class="va">p_values</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Uniform.html">runif</a></span><span class="op">(</span><span class="fl">100</span>, min <span class="op">=</span> <span class="fl">0</span>, max <span class="op">=</span> <span class="fl">0.05</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Create volcano plot</span></span>
+<span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>log_fc <span class="op">=</span> <span class="va">log_fc</span>, p_values <span class="op">=</span> <span class="va">p_values</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">df</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">log_fc</span>, y <span class="op">=</span> <span class="op">-</span><span class="fu"><a href="https://rdrr.io/r/base/Log.html">log10</a></span><span class="op">(</span><span class="va">p_values</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_abline.html">geom_hline</a></span><span class="op">(</span>yintercept <span class="op">=</span> <span class="op">-</span><span class="fu"><a href="https://rdrr.io/r/base/Log.html">log10</a></span><span class="op">(</span><span class="fl">0.05</span><span class="op">)</span>, linetype <span class="op">=</span> <span class="st">"dashed"</span>, color <span class="op">=</span> <span class="st">"red"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_abline.html">geom_vline</a></span><span class="op">(</span>xintercept <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="op">-</span><span class="fl">1</span>, <span class="fl">1</span><span class="op">)</span>, linetype <span class="op">=</span> <span class="st">"dashed"</span>, color <span class="op">=</span> <span class="st">"blue"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"Log2 Fold Change"</span>, y <span class="op">=</span> <span class="st">"-log10(P-value)"</span><span class="op">)</span></span></code></pre></div>
+<div class="inline-figure"><img src="02-visualize_files/figure-html/volcanoplot-1.png" width="70%" style="display: block; margin: auto;"></div>
+<div class="sourceCode" id="cb73"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span></span>
+<span></span>
+<span><span class="co"># Generate example data2</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">42</span><span class="op">)</span>  <span class="co"># for reproducibility</span></span>
+<span><span class="va">n</span> <span class="op">&lt;-</span> <span class="fl">100</span></span>
+<span><span class="va">log_fc</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Uniform.html">runif</a></span><span class="op">(</span><span class="va">n</span><span class="op">/</span><span class="fl">3</span>, min <span class="op">=</span> <span class="fl">1</span>, max <span class="op">=</span> <span class="fl">2</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/stats/Uniform.html">runif</a></span><span class="op">(</span><span class="va">n</span><span class="op">/</span><span class="fl">3</span>, min <span class="op">=</span> <span class="op">-</span><span class="fl">2</span>, max <span class="op">=</span> <span class="op">-</span><span class="fl">1</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/stats/Uniform.html">runif</a></span><span class="op">(</span><span class="va">n</span><span class="op">/</span><span class="fl">3</span>, min <span class="op">=</span> <span class="op">-</span><span class="fl">0.5</span>, max <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span><span class="op">)</span>  <span class="co"># UP, DOWN, and non-regulated genes</span></span>
+<span><span class="va">p_values</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Uniform.html">runif</a></span><span class="op">(</span><span class="va">n</span><span class="op">/</span><span class="fl">3</span>, min <span class="op">=</span> <span class="fl">0.0001</span>, max <span class="op">=</span> <span class="fl">0.01</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/stats/Uniform.html">runif</a></span><span class="op">(</span><span class="va">n</span><span class="op">/</span><span class="fl">3</span>, min <span class="op">=</span> <span class="fl">0.0001</span>, max <span class="op">=</span> <span class="fl">0.01</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/stats/Uniform.html">runif</a></span><span class="op">(</span><span class="va">n</span><span class="op">/</span><span class="fl">3</span>, min <span class="op">=</span> <span class="fl">0.5</span>, max <span class="op">=</span> <span class="fl">1</span><span class="op">)</span><span class="op">)</span>  <span class="co"># Significant and non-significant genes</span></span>
+<span></span>
+<span><span class="co"># Create dataframe</span></span>
+<span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>log_fc <span class="op">=</span> <span class="va">log_fc</span>, p_values <span class="op">=</span> <span class="va">p_values</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Define significance level</span></span>
+<span><span class="va">significance_level</span> <span class="op">&lt;-</span> <span class="fl">0.05</span></span>
+<span></span>
+<span><span class="co"># Create a new column for significance</span></span>
+<span><span class="va">df</span><span class="op">$</span><span class="va">significance</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/ifelse.html">ifelse</a></span><span class="op">(</span><span class="va">df</span><span class="op">$</span><span class="va">p_values</span> <span class="op">&lt;=</span> <span class="va">significance_level</span>, <span class="st">"Significant"</span>, <span class="st">"Not Significant"</span><span class="op">)</span></span>
+<span><span class="va">df</span><span class="op">$</span><span class="va">direction</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/ifelse.html">ifelse</a></span><span class="op">(</span><span class="va">df</span><span class="op">$</span><span class="va">log_fc</span> <span class="op">&gt;</span> <span class="fl">0.5</span>, <span class="st">"Up"</span>, <span class="fu"><a href="https://rdrr.io/r/base/ifelse.html">ifelse</a></span><span class="op">(</span><span class="va">df</span><span class="op">$</span><span class="va">log_fc</span> <span class="op">&lt;</span> <span class="op">-</span><span class="fl">0.5</span>, <span class="st">"Down"</span>, <span class="st">"Non-significant"</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Create volcano plot with color differentiation</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">df</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">log_fc</span>, y <span class="op">=</span> <span class="op">-</span><span class="fu"><a href="https://rdrr.io/r/base/Log.html">log10</a></span><span class="op">(</span><span class="va">p_values</span><span class="op">)</span>, color <span class="op">=</span> <span class="va">significance</span>, shape <span class="op">=</span> <span class="va">direction</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">2</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_abline.html">geom_hline</a></span><span class="op">(</span>yintercept <span class="op">=</span> <span class="op">-</span><span class="fu"><a href="https://rdrr.io/r/base/Log.html">log10</a></span><span class="op">(</span><span class="va">significance_level</span><span class="op">)</span>, linetype <span class="op">=</span> <span class="st">"dashed"</span>, color <span class="op">=</span> <span class="st">"red"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"Log2 Fold Change"</span>, y <span class="op">=</span> <span class="st">"-log10(P-value)"</span>, color <span class="op">=</span> <span class="st">"Significance"</span>, shape <span class="op">=</span> <span class="st">"Direction"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html">scale_color_manual</a></span><span class="op">(</span>values <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Significant"</span> <span class="op">=</span> <span class="st">"red"</span>, <span class="st">"Not Significant"</span> <span class="op">=</span> <span class="st">"black"</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html">scale_shape_manual</a></span><span class="op">(</span>values <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Up"</span> <span class="op">=</span> <span class="fl">17</span>, <span class="st">"Down"</span> <span class="op">=</span> <span class="fl">15</span>, <span class="st">"Non-significant"</span> <span class="op">=</span> <span class="fl">16</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<div class="inline-figure"><img src="02-visualize_files/figure-html/volcanoplot-2.png" width="70%" style="display: block; margin: auto;"></div>
+</div>
+<div id="interpretation-64" class="section level3" number="3.6.3">
+<h3>
+<span class="header-section-number">3.6.3</span> Interpretation<a class="anchor" aria-label="anchor" href="#interpretation-64"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li>Volcano plots provide a visual representation of differential expression analysis results, highlighting genes or features that exhibit significant changes in expression levels.</li>
+<li>The x-axis represents the magnitude of change (e.g., fold change), while the y-axis represents statistical significance (usually represented as the negative logarithm of the p-value).</li>
+<li>Genes with high statistical significance and large fold changes are often considered as potential candidates for further investigation.</li>
+<li>Thresholds for statistical significance and fold change can be adjusted based on study-specific criteria or biological context.</li>
+</ul>
+</div>
+</div>
+<div id="term-principal-component-analysis-pca-plot" class="section level2" number="3.7">
+<h2>
+<span class="header-section-number">3.7</span> Term: Principal Component Analysis (PCA) Plot<a class="anchor" aria-label="anchor" href="#term-principal-component-analysis-pca-plot"><i class="fas fa-link"></i></a>
+</h2>
+<div id="definition-66" class="section level3" number="3.7.1">
+<h3>
+<span class="header-section-number">3.7.1</span> Definition<a class="anchor" aria-label="anchor" href="#definition-66"><i class="fas fa-link"></i></a>
+</h3>
+<p>A Principal Component Analysis (PCA) plot is a visualization technique used to reduce the dimensionality of multivariate data while preserving its variance. It is commonly employed in bioinformatics to explore patterns and relationships within high-dimensional datasets, such as gene expression or metabolomics data. PCA identifies orthogonal axes, called principal components, that capture the maximum variance in the data. By projecting data points onto these components, PCA plots provide insights into the underlying structure of the dataset and facilitate the identification of clusters or trends.</p>
+</div>
+<div id="r-code-illustration-65" class="section level3" number="3.7.2">
+<h3>
+<span class="header-section-number">3.7.2</span> R Code Illustration<a class="anchor" aria-label="anchor" href="#r-code-illustration-65"><i class="fas fa-link"></i></a>
+</h3>
+<div class="sourceCode" id="cb74"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Load required libraries</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Set seed for reproducibility</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">123</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Define parameters</span></span>
+<span><span class="va">num_samples</span> <span class="op">&lt;-</span> <span class="fl">150</span>    <span class="co"># Number of samples</span></span>
+<span><span class="va">num_genes</span> <span class="op">&lt;-</span> <span class="fl">500</span>      <span class="co"># Number of genes</span></span>
+<span><span class="va">num_clusters</span> <span class="op">&lt;-</span> <span class="fl">3</span>     <span class="co"># Number of clusters</span></span>
+<span></span>
+<span><span class="co"># Generate synthetic gene expression data with distinct clusters</span></span>
+<span><span class="va">gene_expr</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span><span class="fl">0</span>, nrow <span class="op">=</span> <span class="va">num_samples</span>, ncol <span class="op">=</span> <span class="va">num_genes</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Assign clusters to samples</span></span>
+<span><span class="va">cluster_assignments</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="va">num_clusters</span>, <span class="va">num_samples</span>, replace <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Generate gene expression data for each cluster</span></span>
+<span><span class="kw">for</span> <span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="va">num_clusters</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="va">cluster_size</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">cluster_assignments</span> <span class="op">==</span> <span class="va">i</span><span class="op">)</span></span>
+<span>  <span class="va">cluster_mean</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="va">num_genes</span>, mean <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/Uniform.html">runif</a></span><span class="op">(</span><span class="fl">1</span>, min <span class="op">=</span> <span class="op">-</span><span class="fl">1</span>, max <span class="op">=</span> <span class="fl">1</span><span class="op">)</span>, sd <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span></span>
+<span>  <span class="va">gene_expr</span><span class="op">[</span><span class="va">cluster_assignments</span> <span class="op">==</span> <span class="va">i</span>, <span class="op">]</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="va">cluster_size</span> <span class="op">*</span> <span class="va">num_genes</span>, mean <span class="op">=</span> <span class="va">cluster_mean</span>, sd <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span>, nrow <span class="op">=</span> <span class="va">cluster_size</span>, ncol <span class="op">=</span> <span class="va">num_genes</span><span class="op">)</span></span>
+<span><span class="op">}</span></span>
+<span></span>
+<span><span class="co"># Perform PCA</span></span>
+<span><span class="va">pca_result</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/prcomp.html">prcomp</a></span><span class="op">(</span><span class="va">gene_expr</span>, scale. <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>  <span class="co"># Scale the data for PCA</span></span>
+<span></span>
+<span><span class="co"># Create PCA plot</span></span>
+<span><span class="va">pca_data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html">as.data.frame</a></span><span class="op">(</span><span class="va">pca_result</span><span class="op">$</span><span class="va">x</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Add cluster assignments to the PCA data</span></span>
+<span><span class="va">pca_data</span><span class="op">$</span><span class="va">Cluster</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">cluster_assignments</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Create PCA plot with color grouping by cluster</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">pca_data</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">PC1</span>, y <span class="op">=</span> <span class="va">PC2</span>, color <span class="op">=</span> <span class="va">Cluster</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"Principal Component 1"</span>, y <span class="op">=</span> <span class="st">"Principal Component 2"</span>, color <span class="op">=</span> <span class="st">"Cluster"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_bw</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<div class="inline-figure"><img src="02-visualize_files/figure-html/pca-1.png" width="70%" style="display: block; margin: auto;"></div>
+</div>
+<div id="interpretation-65" class="section level3" number="3.7.3">
+<h3>
+<span class="header-section-number">3.7.3</span> Interpretation<a class="anchor" aria-label="anchor" href="#interpretation-65"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li>PCA plots visualize high-dimensional data in a lower-dimensional space, capturing the most significant variations.</li>
+<li>Each data point represents a sample or observation in the dataset, projected onto the principal components.</li>
+<li>Clustering or patterns in the PCA plot indicate similarities or differences among samples, revealing underlying structure or trends.</li>
+<li>The first few principal components often explain the majority of the variance in the data, making them useful for data exploration and visualization.</li>
+</ul>
+</div>
+</div>
+<div id="term-network-graphs" class="section level2" number="3.8">
+<h2>
+<span class="header-section-number">3.8</span> Term: Network Graphs<a class="anchor" aria-label="anchor" href="#term-network-graphs"><i class="fas fa-link"></i></a>
+</h2>
+<div id="definition-67" class="section level3" number="3.8.1">
+<h3>
+<span class="header-section-number">3.8.1</span> Definition:<a class="anchor" aria-label="anchor" href="#definition-67"><i class="fas fa-link"></i></a>
+</h3>
+<p>Network graphs, also known as graphs or networks, are mathematical representations of relationships between entities, often visualized as nodes (vertices) connected by edges (links or relationships). In bioinformatics, network graphs are widely used to model complex biological systems, such as protein-protein interactions, gene regulatory networks, metabolic pathways, and phylogenetic relationships. They provide a powerful framework for analyzing and visualizing biological data in the context of interconnected networks, enabling researchers to uncover functional modules, identify key nodes or hubs, and infer biological processes.</p>
+</div>
+<div id="r-code-illustration-66" class="section level3" number="3.8.2">
+<h3>
+<span class="header-section-number">3.8.2</span> R Code Illustration:<a class="anchor" aria-label="anchor" href="#r-code-illustration-66"><i class="fas fa-link"></i></a>
+</h3>
+<div class="sourceCode" id="cb75"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Load required library</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://r.igraph.org/">igraph</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Example data1</span></span>
+<span><span class="va">nodes</span> <span class="op">&lt;-</span> <span class="va">letters</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">20</span><span class="op">]</span></span>
+<span><span class="va">edges</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>from <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="va">nodes</span>, size <span class="op">=</span> <span class="fl">20</span>, replace <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>,</span>
+<span>                    to <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="va">nodes</span>, size <span class="op">=</span> <span class="fl">20</span>, replace <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Create network graph</span></span>
+<span><span class="va">graph</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://r.igraph.org/reference/graph_from_data_frame.html">graph_from_data_frame</a></span><span class="op">(</span><span class="va">edges</span>, directed <span class="op">=</span> <span class="cn">FALSE</span>, vertices <span class="op">=</span> <span class="va">nodes</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">graph</span><span class="op">)</span></span></code></pre></div>
+<div class="inline-figure"><img src="02-visualize_files/figure-html/netgraph-1.png" width="70%" style="display: block; margin: auto;"></div>
+<div class="sourceCode" id="cb76"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span></span>
+<span><span class="co"># Example data2</span></span>
+<span><span class="co"># Load required libraries</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://r.igraph.org/">igraph</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggraph.data-imaginist.com">ggraph</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggrepel.slowkow.com/">ggrepel</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Set seed for reproducibility</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">123</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Define parameters</span></span>
+<span><span class="va">num_genes</span> <span class="op">&lt;-</span> <span class="fl">20</span>  <span class="co"># Number of genes</span></span>
+<span><span class="va">num_edges</span> <span class="op">&lt;-</span> <span class="fl">30</span>  <span class="co"># Number of edges</span></span>
+<span></span>
+<span><span class="co"># Generate random gene names</span></span>
+<span><span class="va">genes</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span><span class="op">(</span><span class="st">"Gene"</span>, <span class="fl">1</span><span class="op">:</span><span class="va">num_genes</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Generate random edges between genes</span></span>
+<span><span class="va">edges</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span></span>
+<span>  from <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="va">genes</span>, size <span class="op">=</span> <span class="va">num_edges</span>, replace <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>,</span>
+<span>  to <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html">sample</a></span><span class="op">(</span><span class="va">genes</span>, size <span class="op">=</span> <span class="va">num_edges</span>, replace <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Create igraph graph object</span></span>
+<span><span class="va">graph</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://r.igraph.org/reference/graph_from_data_frame.html">graph_from_data_frame</a></span><span class="op">(</span><span class="va">edges</span>, directed <span class="op">=</span> <span class="cn">FALSE</span>, vertices <span class="op">=</span> <span class="va">genes</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Plot network graph using ggraph</span></span>
+<span><span class="va">g</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggraph.data-imaginist.com/reference/ggraph.html">ggraph</a></span><span class="op">(</span><span class="va">graph</span>, layout <span class="op">=</span> <span class="st">"fr"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggraph.data-imaginist.com/reference/geom_edge_link.html">geom_edge_link</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggraph.data-imaginist.com/reference/geom_node_point.html">geom_node_point</a></span><span class="op">(</span>color <span class="op">=</span> <span class="st">"steelblue"</span>, size <span class="op">=</span> <span class="fl">5</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggraph.data-imaginist.com/reference/geom_node_text.html">geom_node_text</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>label <span class="op">=</span> <span class="va">name</span><span class="op">)</span>, repel <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="op">+</span>  <span class="co"># Add node labels with repulsion</span></span>
+<span>  <span class="fu"><a href="https://ggraph.data-imaginist.com/reference/theme_graph.html">theme_graph</a></span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="va">g</span></span></code></pre></div>
+<div class="inline-figure"><img src="02-visualize_files/figure-html/netgraph-2.png" width="70%" style="display: block; margin: auto;"></div>
+</div>
+<div id="interpretation-66" class="section level3" number="3.8.3">
+<h3>
+<span class="header-section-number">3.8.3</span> Interpretation<a class="anchor" aria-label="anchor" href="#interpretation-66"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li>Network graphs represent relationships between entities as interconnected nodes and edges.</li>
+<li>Nodes typically represent biological entities such as genes, proteins, metabolites, or individuals, while edges denote interactions or relationships between them.</li>
+<li>The topology of a network graph, including node degree, centrality, and clustering coefficient, provides insights into the structure and organization of biological systems.
+-nAnalysis of network graphs can reveal important biological properties, such as modular organization, network motifs, and key regulatory elements.</li>
+</ul>
+</div>
+</div>
+<div id="term-manhattan-plots" class="section level2" number="3.9">
+<h2>
+<span class="header-section-number">3.9</span> Term: Manhattan Plots<a class="anchor" aria-label="anchor" href="#term-manhattan-plots"><i class="fas fa-link"></i></a>
+</h2>
+<div id="definition-68" class="section level3" number="3.9.1">
+<h3>
+<span class="header-section-number">3.9.1</span> Definition<a class="anchor" aria-label="anchor" href="#definition-68"><i class="fas fa-link"></i></a>
+</h3>
+<p>Manhattan plots are graphical representations used in genome-wide association studies to visualize the p-values resulting from statistical tests for association between genetic variants and a trait of interest. In these plots, each data point represents a single nucleotide polymorphism (SNP) or genetic variant, plotted according to its genomic position on the x-axis and its corresponding -log10(p-value) on the y-axis.</p>
+</div>
+<div id="r-code-illustration-67" class="section level3" number="3.9.2">
+<h3>
+<span class="header-section-number">3.9.2</span> R Code Illustration<a class="anchor" aria-label="anchor" href="#r-code-illustration-67"><i class="fas fa-link"></i></a>
+</h3>
+<div class="sourceCode" id="cb77"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span></span>
+<span><span class="co"># Generate example data for a Manhattan plot</span></span>
+<span><span class="va">chromosomes</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span>, each <span class="op">=</span> <span class="fl">10</span><span class="op">)</span></span>
+<span><span class="va">positions</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">10</span>, <span class="fl">5</span><span class="op">)</span></span>
+<span><span class="va">p_values</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">20</span>, mean <span class="op">=</span> <span class="fl">0</span>, sd <span class="op">=</span> <span class="fl">1</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">30</span>, mean <span class="op">=</span> <span class="fl">0</span>, sd <span class="op">=</span> <span class="fl">2</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">20</span>, mean <span class="op">=</span> <span class="fl">0</span>, sd <span class="op">=</span> <span class="fl">3</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">20</span>, mean <span class="op">=</span> <span class="fl">0</span>, sd <span class="op">=</span> <span class="fl">4</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">10</span>, mean <span class="op">=</span> <span class="fl">0</span>, sd <span class="op">=</span> <span class="fl">5</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">manhattan_data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>Chromosome <span class="op">=</span> <span class="va">chromosomes</span>, Position <span class="op">=</span> <span class="va">positions</span>, P_Value <span class="op">=</span> <span class="va">p_values</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Plot Manhattan plot</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">manhattan_data</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">Position</span>, y <span class="op">=</span> <span class="op">-</span><span class="fu"><a href="https://rdrr.io/r/base/Log.html">log10</a></span><span class="op">(</span><span class="va">P_Value</span><span class="op">)</span>, color <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">Chromosome</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">2</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html">scale_color_manual</a></span><span class="op">(</span>values <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"blue"</span>, <span class="st">"red"</span>, <span class="st">"green"</span>, <span class="st">"orange"</span>, <span class="st">"purple"</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_abline.html">geom_hline</a></span><span class="op">(</span>yintercept <span class="op">=</span> <span class="op">-</span><span class="fu"><a href="https://rdrr.io/r/base/Log.html">log10</a></span><span class="op">(</span><span class="fl">0.05</span><span class="op">)</span>, linetype <span class="op">=</span> <span class="st">"dashed"</span>, color <span class="op">=</span> <span class="st">"gray"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"Genomic Position"</span>, y <span class="op">=</span> <span class="st">"-log10(P-value)"</span>, title <span class="op">=</span> <span class="st">"Manhattan Plot"</span>, color<span class="op">=</span><span class="st">"Chromosome"</span><span class="op">)</span></span></code></pre></div>
+<div class="inline-figure"><img src="02-visualize_files/figure-html/manhattanplot-1.png" width="70%" style="display: block; margin: auto;"></div>
+<div class="sourceCode" id="cb78"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span></span>
+<span></span>
+<span><span class="co"># Load required library</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Set seed for reproducibility</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">123</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Number of markers</span></span>
+<span><span class="va">num_markers</span> <span class="op">&lt;-</span> <span class="fl">200</span></span>
+<span></span>
+<span><span class="co"># Generate simulated genomic data</span></span>
+<span><span class="va">genomic_position</span> <span class="op">&lt;-</span> <span class="fl">1</span><span class="op">:</span><span class="va">num_markers</span>  <span class="co"># Assuming each marker is located at consecutive genomic positions</span></span>
+<span><span class="va">p_values</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Uniform.html">runif</a></span><span class="op">(</span><span class="va">num_markers</span> <span class="op">-</span> <span class="fl">10</span>, min <span class="op">=</span> <span class="fl">0</span>, max <span class="op">=</span> <span class="fl">0.1</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/stats/Uniform.html">runif</a></span><span class="op">(</span><span class="fl">10</span>, min <span class="op">=</span> <span class="fl">0</span>, max <span class="op">=</span> <span class="fl">1e-6</span><span class="op">)</span><span class="op">)</span>  <span class="co"># Simulate p-values</span></span>
+<span></span>
+<span><span class="co"># Create a data frame</span></span>
+<span><span class="va">manhattan_data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span></span>
+<span>  Genomic_Position <span class="op">=</span> <span class="va">genomic_position</span>,</span>
+<span>  P_Value <span class="op">=</span> <span class="va">p_values</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Plot Manhattan plot with skyscrapers</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">manhattan_data</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">Genomic_Position</span>, y <span class="op">=</span> <span class="op">-</span><span class="fu"><a href="https://rdrr.io/r/base/Log.html">log10</a></span><span class="op">(</span><span class="va">P_Value</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">2</span>, color<span class="op">=</span><span class="st">"black"</span><span class="op">)</span> <span class="op">+</span>  <span class="co"># Points representing markers</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_segment.html">geom_segment</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>xend <span class="op">=</span> <span class="va">Genomic_Position</span>, yend <span class="op">=</span> <span class="fl">0</span><span class="op">)</span>, color <span class="op">=</span> <span class="st">"steelblue"</span><span class="op">)</span> <span class="op">+</span>  <span class="co"># Skyscrapers</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_abline.html">geom_hline</a></span><span class="op">(</span>yintercept <span class="op">=</span> <span class="op">-</span><span class="fu"><a href="https://rdrr.io/r/base/Log.html">log10</a></span><span class="op">(</span><span class="fl">0.01</span><span class="op">)</span>, linetype <span class="op">=</span> <span class="st">"dashed"</span>, color <span class="op">=</span> <span class="st">"red"</span>, size<span class="op">=</span><span class="fl">1.1</span><span class="op">)</span> <span class="op">+</span>  <span class="co"># Significance threshold line</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"Genomic Position"</span>, y <span class="op">=</span> <span class="st">"-log10(P-value)"</span>, title <span class="op">=</span> <span class="st">"Manhattan Plot"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<div class="inline-figure"><img src="02-visualize_files/figure-html/manhattanplot-2.png" width="70%" style="display: block; margin: auto;"></div>
+</div>
+<div id="interpretation-67" class="section level3" number="3.9.3">
+<h3>
+<span class="header-section-number">3.9.3</span> Interpretation<a class="anchor" aria-label="anchor" href="#interpretation-67"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li>Manhattan plots are commonly used in genome-wide association studies (GWAS) to identify genetic variants associated with complex traits or diseases.</li>
+<li>SNPs or genetic variants that surpass a significance threshold (-log10(p-value)) are considered potentially associated with the trait under investigation.</li>
+<li>The distinctive peaks in a Manhattan plot indicate regions of the genome where significant genetic associations may be located.</li>
+<li>Researchers use Manhattan plots to prioritize regions of interest for further investigation, such as candidate gene identification or functional annotation.</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+
+  <div class="chapter-nav">
+<div class="prev"><a href="omics-terminologies.html"><span class="header-section-number">2</span> Omics Terminologies</a></div>
+<div class="next"><a href="microbiome-terminologies.html"><span class="header-section-number">4</span> Microbiome Terminologies</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#visualization-terminologies"><span class="header-section-number">3</span> Visualization Terminologies</a></li>
+<li>
+<a class="nav-link" href="#term-phylogenetic-tree"><span class="header-section-number">3.1</span> Term: Phylogenetic Tree</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#definition-60"><span class="header-section-number">3.1.1</span> Definition</a></li>
+<li><a class="nav-link" href="#r-code-illustration-60"><span class="header-section-number">3.1.2</span> R Code Illustration</a></li>
+<li><a class="nav-link" href="#interpretation-60"><span class="header-section-number">3.1.3</span> Interpretation:</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#term-nucleotide-sequence-logo"><span class="header-section-number">3.2</span> Term Nucleotide sequence logo</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#definition-61"><span class="header-section-number">3.2.1</span> Definition</a></li>
+<li><a class="nav-link" href="#r-code-illustration-61"><span class="header-section-number">3.2.2</span> R Code Illustration</a></li>
+<li><a class="nav-link" href="#interpretation-61"><span class="header-section-number">3.2.3</span> Interpretation:</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#amino-acid-sequence-logo"><span class="header-section-number">3.3</span> Amino Acid Sequence Logo</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#definition-62"><span class="header-section-number">3.3.1</span> Definition</a></li>
+<li><a class="nav-link" href="#r-code-illustration-62"><span class="header-section-number">3.3.2</span> R Code Illustration</a></li>
+<li><a class="nav-link" href="#interpretation-62"><span class="header-section-number">3.3.3</span> Interpretation</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#term-genome-browser"><span class="header-section-number">3.4</span> Term: Genome Browser</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#definition-63"><span class="header-section-number">3.4.1</span> Definition</a></li>
+<li><a class="nav-link" href="#r-code-illustration-63"><span class="header-section-number">3.4.2</span> R Code Illustration</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#term-heatmap"><span class="header-section-number">3.5</span> Term: Heatmap</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#definition-64"><span class="header-section-number">3.5.1</span> Definition</a></li>
+<li><a class="nav-link" href="#interpretation-63"><span class="header-section-number">3.5.2</span> Interpretation</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#term-volcano-plots"><span class="header-section-number">3.6</span> Term: Volcano Plots</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#definition-65"><span class="header-section-number">3.6.1</span> Definition</a></li>
+<li><a class="nav-link" href="#r-code-illustration-64"><span class="header-section-number">3.6.2</span> R Code Illustration</a></li>
+<li><a class="nav-link" href="#interpretation-64"><span class="header-section-number">3.6.3</span> Interpretation</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#term-principal-component-analysis-pca-plot"><span class="header-section-number">3.7</span> Term: Principal Component Analysis (PCA) Plot</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#definition-66"><span class="header-section-number">3.7.1</span> Definition</a></li>
+<li><a class="nav-link" href="#r-code-illustration-65"><span class="header-section-number">3.7.2</span> R Code Illustration</a></li>
+<li><a class="nav-link" href="#interpretation-65"><span class="header-section-number">3.7.3</span> Interpretation</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#term-network-graphs"><span class="header-section-number">3.8</span> Term: Network Graphs</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#definition-67"><span class="header-section-number">3.8.1</span> Definition:</a></li>
+<li><a class="nav-link" href="#r-code-illustration-66"><span class="header-section-number">3.8.2</span> R Code Illustration:</a></li>
+<li><a class="nav-link" href="#interpretation-66"><span class="header-section-number">3.8.3</span> Interpretation</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#term-manhattan-plots"><span class="header-section-number">3.9</span> Term: Manhattan Plots</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#definition-68"><span class="header-section-number">3.9.1</span> Definition</a></li>
+<li><a class="nav-link" href="#r-code-illustration-67"><span class="header-section-number">3.9.2</span> R Code Illustration</a></li>
+<li><a class="nav-link" href="#interpretation-67"><span class="header-section-number">3.9.3</span> Interpretation</a></li>
+</ul>
+</li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/tmbuza/imap-machine-learning/blob/gh-pages/02-visualize.Rmd">View source <i class="fas fa-air-freshener"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/tmbuza/imap-machine-learning/edit/gh-pages/02-visualize.Rmd">Edit this page <i class="fas fa-air-freshener"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container">
+    <div class="row">
+      <div class="col-12 col-md-6 mt-3">
+        <p><strong><u>Bioinformatics Dictionary</u></strong>: A Comprehensive Guide to Bioinformatic Concepts and Tools</p>
+<br><p>Authored by <strong>Teresia Mrema Buza</strong>, </p>
+<br>
+</div>
+      <div class="col-12 col-md-6 mt-3">
+        <p>Note: This bioinformatics dictionary was created using the <a class="text-light" href="https://bookdown.org/yihui/bookdown/">bookdown</a> R package, styled with the modern bs4_book format.</p>
+      </div>
+
+    </div>
+  </div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>
