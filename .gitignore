@@ -2,9 +2,21 @@
 .Rhistory
 .Rapp.history
 
+renv/
+data/*
+_bookdown_files/*.*
 *.rds
 
-renv/
+__pycache__/
+*.py[cod]
+*$py.class
+
+*.gz
+*.png
+
+!images/*png
+
+# C e
 
 # Session Data files
 .RData

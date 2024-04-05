@@ -1,3 +1,5 @@
+# (PART) VISUALIZATION TERMS {-}
+
 # Visualization Terminologies
 This compilation provides concise definitions of essential bioinformatics concepts, complemented by simple R code illustrations demonstrating various visualization techniques. These illustrations cover a wide range of visualization types, offering a comprehensive overview of bioinformatics visualization practices.
 

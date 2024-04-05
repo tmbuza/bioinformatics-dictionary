@@ -1,4 +1,4 @@
-# (PART) BIOINFORMATICS TERMS{-}
+# (PART) BIOINFORMATICS TERMS {-}
 
 # Omics Terminologies
 
