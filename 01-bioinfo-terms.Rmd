@@ -9,7 +9,7 @@ From genomics and transcriptomics to proteomics, metabolomics, and beyond, each 
 ```{block, type="infoicon", echo=TRUE}
 **Code Illustration Demo**
 
-For user-friendly code illustrations, we provide examples for each term. An example of an analysis code can be found in Section \ref{rnaseq-analysis}, demonstrating RNA-Seq Data Analysis.
+For user-friendly code illustrations, we provide examples for each term. An example of an analysis code can be found in Section \@ref(rnaseq-analysis), demonstrating RNA-Seq Data Analysis.
 ```
 
 
