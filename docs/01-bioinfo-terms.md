@@ -6,12 +6,8 @@ Welcome to the Bioinformatics Dictionary, your comprehensive guide to the termin
 
 From genomics and transcriptomics to proteomics, metabolomics, and beyond, each entry equips you with the knowledge needed to explore the molecular mechanisms driving biological systems. Delve into the depths of bioinformatics and uncover the secrets encoded within the genomes, transcripts, proteins, and metabolites that shape life as we know it.
 
-<div class="infoicon">
-<p><strong>Code Illustration Demo</strong></p>
-<p>For user-friendly code illustrations, we provide examples for each
-term. An example of an analysis code can be found in Section Refer
-@ref(rnaseqanalysis), demonstrating RNA-Seq Data Analysis.</p>
-</div>
+
+> **Code Illustration Demo:** To ensure user-friendly code illustrations, examples will be provided for each term. We will follow the structure demonstrated in Section \@ref(rnaseqanalysis), which showcases RNA-Seq Data Analysis with several plot types.
 
 
 ## Term: DNA Sequence
@@ -200,6 +196,7 @@ Sequence alignment enables the identification of conserved regions, mutations, a
 ### Definition
 
 RNASeq data analysis involves the processing, alignment, quantification, and differential expression analysis of RNA sequencing (RNASeq) data, elucidating gene expression patterns, transcript isoforms, and regulatory networks.
+
 
 ### R Code Illustration:
 DESeq2 is a popular R package used for differential gene expression analysis, particularly with RNA-seq data. To demonstrate how to use the DESeq() function in DESeq2, you need count data for genes obtained from an RNA-seq experiment. Here's an example of what the count data might look like:

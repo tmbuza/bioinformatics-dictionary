@@ -2,7 +2,7 @@ Dear Triza,
 
 I hope this message finds you well. First and foremost, I want to extend my sincerest apologies for the delayed response as I promised. The reason for the delay was my intention to have something substantial to share with you, providing insight into the projects we could potentially collaborate on.
 
-With that said, I am excited to finally reach out to you with an invitation to collaborate on three impactful projects aimed at advancing knowledge, diversity, and career growth in STEM and related fields:
+With that said, I am excited to finally reach out to you with an invitation to collaborate on three impactful projects aimed at advancing knowledge, diversity, and career growth in bioinformatics, STEM (data science) and related fields:
 
 **Bioinformatics Dictionary:** Join us in creating a comprehensive guide to bioinformatics terminology and methodologies, empowering researchers, students, and job seekers to navigate the intricacies of bioinformatics with ease. You can find the initial work on GitHub Pages: [Bioinformatics Dictionary](https://tmbuza.github.io/bioinformatics-dictionary/)
 
