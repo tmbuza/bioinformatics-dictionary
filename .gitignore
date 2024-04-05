@@ -4,6 +4,8 @@
 
 *.rds
 
+renv/
+
 # Session Data files
 .RData
 .RDataTmp
