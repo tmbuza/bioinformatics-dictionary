@@ -9,8 +9,8 @@ From genomics and transcriptomics to proteomics, metabolomics, and beyond, each 
 <div class="infoicon">
 <p><strong>Code Illustration Demo</strong></p>
 <p>For user-friendly code illustrations, we provide examples for each
-term. An example of an analysis code can be found in Section
-@ref(rnaseq-analysis), demonstrating RNA-Seq Data Analysis.</p>
+term. An example of an analysis code can be found in Section Refer
+@ref(rnaseqanalysis), demonstrating RNA-Seq Data Analysis.</p>
 </div>
 
 
@@ -195,7 +195,7 @@ alignment <- Bioconductor::Biostrings::pairwiseAlignment(sequence1, sequence2)
 
 Sequence alignment enables the identification of conserved regions, mutations, and evolutionary changes in biological sequences, providing insights into sequence homology and functional conservation.
 
-## Term: RNASeq Data Analysis {#rnaseq-analysis}
+## Term: RNASeq Data Analysis {#rnaseqanalysis}
 
 ### Definition
 

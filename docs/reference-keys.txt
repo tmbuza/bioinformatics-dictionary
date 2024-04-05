@@ -45,7 +45,7 @@ term-sequence-alignment
 definition-9
 r-code-illustration-9
 interpretation-9
-rnaseq-analysis
+rnaseqanalysis
 definition-10
 r-code-illustration-10
 ma-plot
