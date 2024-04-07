@@ -16,4 +16,4 @@ rmd_files:
   # - 01-omics.Rmd
   - 02-visualize.Rmd
   - 03-microbiome.Rmd
-  # - 04-machine-learning.Rmd
+  - 04-machine-learning.Rmd

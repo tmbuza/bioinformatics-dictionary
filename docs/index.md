@@ -2,6 +2,8 @@
 title: "Bioinformatics Dictionary"
 subtitle: "A Comprehensive Guide to Bioinformatic Concepts and Tools"
 author: "Teresia Mrema Buza"
+date:
+- <b>2024-04-07</b>
 site: bookdown::bookdown_site
 documentclass: book
 css: style.css
@@ -51,9 +53,10 @@ description: |
 
 Welcome to the Bioinformatics Dictionary: A Comprehensive Resource for Students, Job Seekers, and Professionals!
 
-This dictionary serves as a valuable reference for individuals navigating the vast and dynamic field of bioinformatics. Whether you're a student, job seeker, or seasoned professional, understanding the technical terms and concepts in bioinformatics is essential for success in research, academia, and industry.
+This dictionary serves as a valuable reference for individuals navigating the vast and dynamic field of bioinformatics. Whether you’re a student, job seeker, or seasoned professional, understanding the technical terms and concepts in bioinformatics is essential for success in research, academia, and industry.
 
-Inside this dictionary, you'll find a comprehensive collection of key terms, definitions, and explanations covering various aspects of bioinformatics, including genomics, transcriptomics, proteomics, computational biology, and more. Whether you're deciphering research papers, preparing for interviews, or exploring new areas of study, this resource is designed to provide clarity and insight into the language of bioinformatics.
+Inside this dictionary, you’ll find a comprehensive collection of key terms, definitions, and explanations covering various aspects of bioinformatics, including genomics, transcriptomics, proteomics, computational biology, and more. Whether you’re deciphering research papers, preparing for interviews, or exploring new areas of study, this resource is designed to provide clarity and insight into the language of bioinformatics.
 
 We hope this dictionary will be a valuable tool in your journey through the fascinating world of bioinformatics. Happy exploring!
+
 
